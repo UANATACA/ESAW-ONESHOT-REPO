@@ -1,6 +1,6 @@
-apiDefinitions:
+apis:
   main: esaw_oneshot.yaml
-referenceDocs:
+theme.openapi:
   hideDownloadButton: true
   showConsole: false
   scrollYOffset: main-header # Esto baja el panel verical izquierdo justo debajo del header
