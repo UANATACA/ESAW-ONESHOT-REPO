@@ -1,5 +1,5 @@
 apiDefinitions:
-  main: vol.yaml
+  main: esaw_oneshot.yaml
 referenceDocs:
   hideDownloadButton: true
   showConsole: false
