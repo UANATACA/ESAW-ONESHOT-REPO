@@ -5,9 +5,7 @@ info:
   description: 
     $ref: ./esaw_oneshot.md
   version: v1
-  x-logo:
-    url: https://raw.githubusercontent.com/UANATACA/LTV-REPO/main/img/LTV_Extension_En.png
-    altText: LTV extension logo
+
 x-tagGroups: 
   - name: API Reference
     tags: 
