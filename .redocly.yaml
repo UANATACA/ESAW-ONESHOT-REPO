@@ -1,5 +1,8 @@
+extends:
+  - minimal
 apis:
-  main: esaw_oneshot.yaml
+  main@v1:
+   root: ./esaw_oneshot.yaml
 theme.openapi:
   hideDownloadButton: true
   showConsole: false
