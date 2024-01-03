@@ -1,7 +1,7 @@
 extends:
   - minimal
 apis:
-  main@v1:
+  main@internal:
    root: ./esaw_oneshot.yaml
 theme:
   openapi:
