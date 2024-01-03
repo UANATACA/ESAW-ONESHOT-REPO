@@ -33,7 +33,7 @@ paths:
           content:
             application/pdf:
               schema: 
-                type: binary
+                type: string
               example: 
                 " %PDF-1.7\n
                   %����\n
@@ -144,7 +144,7 @@ paths:
           content:
             application/pdf:
               schema: 
-                type: binary
+                type: string
               example: 
                 " %PDF-1.7\n
                   %����\n
@@ -261,7 +261,7 @@ components:
       type: object
       properties: 
         document:
-          type: binary
+          type: string
           description: Document to extend its signatures
         tsa_url:
           type: string
