@@ -1,24 +1,16 @@
 openapi: 3.0.1
 security: []
 info:
-  title: UANATACA LTV EXTENSION API DOCUMENTATION
+  title: ESAW ONESHOT API DOCUMENTATION
   description: 
     $ref: ./esaw_oneshot.md
   version: v1
 
 x-tagGroups: 
   - name: API Reference
-    tags: 
-      - Addition
-      - Extension
-tags: 
-  - name: Addition
-  - name: Extension 
 paths: 
   /addltv:
     post: 
-      tags: 
-        -  Addition
       summary: ADD
       description: Add revocation information to the signature
       operationId: add-ltv
@@ -128,8 +120,6 @@ paths:
                   }
   /extend:
     post: 
-      tags: 
-        -  Extension
       summary: EXTEND
       description: Extend document signatures
       operationId: extend
