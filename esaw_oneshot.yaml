@@ -12,4 +12,5 @@ x-tagGroups:
   - name: API Reference
 paths: 
   /esawoneshot:
-    $ref: paths/esawoneshot.yaml
+    $ref: paths\esawoneshot.yaml
+  
