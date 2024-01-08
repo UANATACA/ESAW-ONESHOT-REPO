@@ -7,9 +7,11 @@ info:
   description: 
     $ref: ./esaw_oneshot.md
   version: v1
-
 x-tagGroups: 
   - name: API Reference
+tags:
+  - name: Create request
+    description: Creates the certificate request
 paths: 
   /esawoneshot:
     $ref: paths/esawoneshot.yaml

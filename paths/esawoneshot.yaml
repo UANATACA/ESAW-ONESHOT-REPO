@@ -1,4 +1,6 @@
 get:
+  tags: 
+    - Create Request
   description: Returns pets based on ID
   summary: Find pets by ID
   operationId: getPetsById
