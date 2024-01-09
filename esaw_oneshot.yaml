@@ -10,13 +10,17 @@ info:
 
 
 tags:
-  - name: Create
+  - name: Testing
     description: Creates the certificate request
+x-tagGroups: 
+  - name: API Reference
+  - tags:
+    - Testing
 paths: 
   /api/v1/hello:
     get:
       tags:
-      - Create
+      - Testing
       summary: HELLO
       description: Checks if server is UP.
       operationId: hello
