@@ -1,6 +1,6 @@
 post:
   tags:
-    - Create request
+    - Create
   summary: Echo test
   description: Receive the exact message you've sent
   operationId: echo

@@ -10,12 +10,12 @@ info:
 
 
 tags:
-  - name: Create request
+  - name: Create
     description: Creates the certificate request
 x-tagGroups: 
   - name: API Reference
   - tags:
-    - Create request
+    - Create
 paths: 
   /esawoneshot:
     $ref: paths/esawoneshot.yaml
