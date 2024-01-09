@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.1.0
 servers: 
   - url: 'https://api.uanataca.com/api/v1' 
 security: []
@@ -17,48 +17,27 @@ x-tagGroups:
   - tags:
     - Create
 paths: 
-  /esawoneshot:
-    post:
+  /api/v1/hello:
+    get:
       tags:
-        - Create
-      summary: Echo test
-      description: Receive the exact message you've sent
-      operationId: echo
+      - Create
+      summary: HELLO
+      description: Checks if server is UP.
+      operationId: hello
       responses:
-        '200':
-          description: OK
-          headers:
-            X-Rate-Limit:
-              description: calls per hour allowed by the user
-              schema:
-                type: integer
-                format: int32
-    
+        200:
+          description: Successful Response
           content:
             application/json:
               schema:
-                type: string
-              examples:
-                response:
-                  value: Hello world!
-            application/xml:
-              schema:
-                type: string
-            text/csv:
-              schema:
-                type: string
-        '400':
-          description: Unauthorized
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-              example: Hello world!
-          application/xml:
-            schema:
-              type: string
-              example: Hello world!
-        description: Echo payload
-        required: true
-    
+                type: object
+                properties: 
+                  status:
+                    type: string
+                    description: Response status code
+                  details:
+                    type: string
+                    description: Response message
+              example:
+                status: 200 OK
+                details: Hello
