@@ -15,7 +15,8 @@ tags:
   description: 'desc'
 
 paths:
-  $ref: ./paths/esawoneshot.yaml
+  /esawoneshot:
+    $ref: ./paths/esawoneshot.yaml
 x-tagGroups:
 - name: API Reference
   tags:
