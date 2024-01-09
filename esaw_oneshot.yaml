@@ -1474,19 +1474,19 @@ paths:
                     #3b3b3b;''><b>⚠ Not required when included in <a href=''#tag/Tokens/paths/~1api~1v1~1token/post''>token</a>.</b></blockquote>'
                 document_front:
                   description: Front side image of the user's identification document (JPEG or PNG).
-                  type: file
+                  type: string
                   format: binary
                 document_rear:
                   description: Rear side image of the user's identification document (JPEG or PNG)
-                  type: file
+                  type: string
                   format: binary
                 document_owner:
                   description: A selfie image of the user holding the identifying document below his/her chin (JPEG or PNG)
-                  type: file
+                  type: string
                   format: binary
                 extra_document:
                   description: An extra document to upload.
-                  type: file
+                  type: string
                   format: binary
                 env:
                   type: string
