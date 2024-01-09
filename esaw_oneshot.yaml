@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.0
 security: []
 info:
   title: UANATACA ONE-SHOT SIGNATURE API DOCUMENTATION
@@ -15,20 +15,7 @@ tags:
   description: 'desc'
 
 paths:
-  /api/v1/hello:
-    get:
-      tags:
-      - Create
-      summary: HELLO
-      description: Checks if server is UP.
-      operationId: hello
-      responses:
-        200:
-          description: Successful Response
-          content:
-            application/json:
-              schema:
-                type: string
+  $ref: ./paths/esawoneshot.yaml
 x-tagGroups:
 - name: API Reference
   tags:
