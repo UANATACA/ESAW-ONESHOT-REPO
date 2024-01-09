@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.0
 servers: 
   - url: 'https://api.uanataca.com/api/v1' 
 security: []
@@ -12,10 +12,6 @@ info:
 tags:
   - name: Create
     description: Creates the certificate request
-x-tagGroups: 
-  - name: API Reference
-  - tags:
-    - Create
 paths: 
   /api/v1/hello:
     get:
