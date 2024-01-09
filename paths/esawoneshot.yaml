@@ -4,6 +4,70 @@ post:
   summary: Create Request
   description: Create the certificate request to be used
   operationId: esawoneshot
+  requestBody: 
+    content: 
+      'application/json':
+        schema:
+            properties:
+              rao:
+                type: object
+                properties: 
+                  username:
+                    type: string
+                  password:
+                    type: string
+                  pin:
+                    type: string
+              documents: 
+                type: object
+                properties: 
+                  document_front: 
+                    type: object
+                    properties: 
+                      content_type: 
+                        type: string
+                      data: 
+                        type: string
+                  document_rear: 
+                    type: object
+                    properties: 
+                      content_type: 
+                        type: string
+                      data: 
+                        type: string
+                  owner_photo: 
+                    type: object
+                    properties: 
+                      content_type: 
+                        type: string
+                      data: 
+                        type: string
+              request: 
+                type: object
+                properties: 
+                  profile: 
+                    type: string
+                  registration_authority: 
+                    type: integer
+                    format: int32
+                  communication_language: 
+                    type: string
+                  id_document_type: 
+                    type: string
+                  id_document_country: 
+                    type: string
+                  serial_number: 
+                    type: string
+                  given_name: 
+                    type: string
+                  surname_1: 
+                    type: string
+                  surname_2: 
+                    type: string
+                  email: 
+                    type: string
+                  mobile_phone_number: 
+                    type: string
   responses:
     '200':
       description: OK
