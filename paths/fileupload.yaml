@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Files
+  summary: Upload File
+  description: Upload file for envelope
+  operationId: uploadfile
+  requestBody: 
+    content: 
+      'multipart/form-data':
+        schema:
+            properties:
+              documents: 
+                type: object
+                properties: 
+                  File: 
+                    type: object
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              details:
+                type: string
+              pk:
+                type: string  
+          example:
+            details: "a"
+            pk: "a"

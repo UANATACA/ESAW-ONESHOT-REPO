@@ -13,11 +13,21 @@ servers:
 tags:
 - name: Create
   description: 'desc'
+- name: Files
+  description: 'desc'
+- name: Envelope
+  description: 'desc'
 
 paths:
   /esawoneshot:
     $ref: ./paths/esawoneshot.yaml
+  /file/upload:
+    $ref: ./paths/fileupload.yaml
+  /envelope/send:
+    $ref: paths/envelopesend.yaml
 x-tagGroups:
 - name: API Reference
   tags:
   - Create
+  - Files
+  - Envelope

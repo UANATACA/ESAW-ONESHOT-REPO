@@ -1,0 +1,221 @@
+post:
+  tags:
+    - Envelope
+  summary: Send Envelope
+  description: Create and send an envelope
+  operationId: envelopesend
+  requestBody: 
+    content: 
+      'application/json':
+        schema:
+            properties:
+              Documents: 
+                type: array
+                items: 
+                  type: object
+                  properties: 
+                    FileId: 
+                      type: string
+                    DocumentNumber: 
+                      type: integer
+                      format: int32
+              Name: 
+                type: string
+              AddDocumentTimestamp: 
+                type: boolean
+              ShareWithTeam: 
+                type: boolean
+              LockFormFieldsOnFinish: 
+                type: boolean
+              Activities: 
+                type: array
+                items: 
+                  type: object
+                  properties: 
+                    Action: 
+                      type: object
+                      properties: 
+                        Sign: 
+                          type: object
+                          properties: 
+                            RecipientConfiguration: 
+                              type: object
+                              properties: 
+                                ContactInformation: 
+                                  type: object
+                                  properties: 
+                                    Email: 
+                                      type: string
+                                    GivenName: 
+                                      type: string
+                                    Surname: 
+                                      type: string
+                                    PhoneNumber: 
+                                      type: string
+                                    LanguageCode: 
+                                      type: string
+                                SendEmails: 
+                                  type: boolean
+                                AllowAccessAfterFinish: 
+                                  type: boolean
+                                IncludedEmailAppLinks: 
+                                  type: object
+                                  properties: 
+                                    Android: 
+                                      type: boolean
+                                    iOS: 
+                                      type: boolean
+                                    Windows: 
+                                      type: boolean
+                                AllowDelegation: 
+                                  type: boolean
+                                RequireViewContentBeforeFormFilling: 
+                                  type: boolean
+                            SequenceMode: 
+                              type: string
+                            Elements: 
+                              type: object
+                              properties: 
+                                Signatures: 
+                                  type: array
+                                  items: 
+                                    type: object
+                                    properties: 
+                                      ElementId: 
+                                        type: string
+                                      Required: 
+                                        type: boolean
+                                      DocumentNumber: 
+                                        type: integer
+                                        format: int32
+                                      UseExternalTimestampServer: 
+                                        type: boolean
+                                      AllowedSignatureTypes: 
+                                        type: object
+                                        properties: 
+                                          SignaturePlugins: 
+                                            type: array
+                                            items: 
+                                              type: object
+                                              properties: 
+                                                PluginId: 
+                                                  type: string
+                                                Preferred: 
+                                                  type: boolean
+                                                StampImprintConfiguration: 
+                                                  type: object
+                                                  properties: 
+                                                    DisplayExtraInformation: 
+                                                      type: boolean
+                                                    FontName: 
+                                                      type: string
+                                                    FontSizeInPt: 
+                                                      type: integer
+                                                      format: int32
+                                                    DisplayEmail: 
+                                                      type: boolean
+                                                    DisplayIp: 
+                                                      type: boolean
+                                                    DisplayName: 
+                                                      type: boolean
+                                                    DisplaySignatureDate: 
+                                                      type: boolean
+                                      FieldDefinition: 
+                                        type: object
+                                        properties: 
+                                          Position: 
+                                            type: object
+                                            properties: 
+                                              PageNumber: 
+                                                type: integer
+                                                format: int32
+                                              X: 
+                                                type: integer
+                                                format: int32
+                                              Y: 
+                                                type: number
+                                          Size: 
+                                            type: object
+                                            properties: 
+                                              Width: 
+                                                type: integer
+                                                format: int32
+                                              Height: 
+                                                type: integer
+                                                format: int32
+                            SignatureDataConfiguration: 
+                              type: object
+                              properties: 
+                                SignaturePluginData: 
+                                  type: array
+                                  items: 
+                                    type: object
+                                    properties: 
+                                      PluginId: 
+                                        type: string
+                                      Fields: 
+                                        type: array
+                                        items: 
+                                          type: object
+                                          properties: 
+                                            Key: 
+                                              type: string
+                                            Value: 
+                                              type: string
+                            SigningGroup: 
+                              type: string
+                    VisibilityOptions: 
+                      type: array
+                      items: 
+                        type: object
+                        properties: 
+                          DocumentNumber: 
+                            type: integer
+                            format: int32
+                          IsHidden: 
+                            type: boolean
+              EmailConfiguration: 
+                type: object
+                properties: 
+                  Subject: 
+                    type: string
+                  Message: 
+                    type: string
+              ReminderConfiguration: 
+                type: object
+                properties: 
+                  Enabled: 
+                    type: boolean
+                  FirstReminderInDays: 
+                    type: integer
+                    format: int32
+                  ReminderResendIntervalInDays: 
+                    type: integer
+                    format: int32
+                  BeforeExpirationInDays: 
+                    type: integer
+                    format: int32
+              ExpirationConfiguration: 
+                type: object
+                properties: 
+                  ExpirationInSecondsAfterSending: 
+                    type: integer
+                    format: int32
+              
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              details:
+                type: string
+              pk:
+                type: string  
+          example:
+            details: "a"
+            pk: "a"
+
+
