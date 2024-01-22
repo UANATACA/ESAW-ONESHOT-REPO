@@ -12,62 +12,128 @@ post:
               rao:
                 type: object
                 properties: 
+                  pk:
+                    description: ID of RAO
+                    type: string
                   username:
+                    description: Username of RAO cloud certificate
                     type: string
                   password:
+                    description: Password of RAO cloud certificate
                     type: string
                   pin:
+                    description: PIN of RAO cloud certificate
                     type: string
               documents: 
                 type: object
                 properties: 
                   document_front: 
+                    description: Front side of identification document
                     type: object
                     properties: 
                       content_type: 
                         type: string
+                        enum: 
+                          - application/pdf
+                          - image/png
+                          - image/jpg
+                          - image/jpeg
                       data: 
+                        description: Document data encoded with base64
                         type: string
                   document_rear: 
+                    description: Rear side of identification document
                     type: object
                     properties: 
                       content_type: 
                         type: string
+                        enum: 
+                          - application/pdf
+                          - image/png
+                          - image/jpg
+                          - image/jpeg
                       data: 
+                        description: Document data encoded with base64
                         type: string
-                  owner_photo: 
+                  document_owner: 
+                    description: Photo of the remote identity owner with the ID card under the chin
                     type: object
                     properties: 
                       content_type: 
                         type: string
+                        enum: 
+                          - application/pdf
+                          - image/png
+                          - image/jpg
+                          - image/jpeg
                       data: 
+                        description: Document data encoded with base64
                         type: string
               request: 
                 type: object
                 properties: 
                   profile: 
+                    description: Request certificate profile
                     type: string
                   registration_authority: 
+                    description: ID of registration authority
                     type: integer
                     format: int32
                   communication_language: 
+                    description: Language used in triggered communications. Value must be an ISO country code, the default value is 'ES'
                     type: string
                   id_document_type: 
+                    description: Type of identification document
+                    enum: 
+                      - IDC
+                      - PAS
+                      - PNO
+                      - TIN
                     type: string
                   id_document_country: 
+                    description: Country of identification document. Value must be an ISO country code.
                     type: string
                   serial_number: 
+                    description: Serial number of document
                     type: string
                   given_name: 
+                    description: Given name of certificate owner
                     type: string
                   surname_1: 
+                    description: First surname of certificate owner
                     type: string
                   surname_2: 
+                    description: Second surname of certificate owner
                     type: string
                   email: 
+                    description: Email of certificate owner
                     type: string
                   mobile_phone_number: 
+                    description: Mobile phone number of certificate owner
                     type: string
+                  videoid_mode:
+                    description: Sets a requirement of video identificacion in the request. The default value is false.
+                    enum:
+                      - true
+                      - false
+                    type: boolean
+            required: 
+              - rao_pk
+              - rao_username
+              - rao_password
+              - rao_pin
+              - profile
+              - registration_authority
+              - communication_language
+              - id_document_country
+              - id_document_type
+              - serial_number
+              - given_name
+              - surname_1
+              - email
+              - mobile_phone_number
+              - data
+              - content_type
   responses:
     '200':
       description: OK
