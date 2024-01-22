@@ -71,6 +71,17 @@ post:
                         type: string
               request: 
                 type: object
+                required:  
+                  - profile
+                  - registration_authority
+                  - communication_language
+                  - id_document_country
+                  - id_document_type
+                  - serial_number
+                  - given_name
+                  - surname_1
+                  - email
+                  - mobile_phone_number
                 properties: 
                   profile: 
                     description: Request certificate profile
@@ -122,16 +133,7 @@ post:
               - rao_username
               - rao_password
               - rao_pin
-              - profile
-              - registration_authority
-              - communication_language
-              - id_document_country
-              - id_document_type
-              - serial_number
-              - given_name
-              - surname_1
-              - email
-              - mobile_phone_number
+
               - data
               - content_type
   responses:
