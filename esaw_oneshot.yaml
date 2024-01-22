@@ -10,6 +10,7 @@ info:
     altText: Oneshot logo
 servers:
 - url: https://one-shot.developers.uanataca.com
+- url: https://demo.esignanywhere.net
 tags:
 - name: Create
   description: 'Endpoints to start requesting a digital certificate'
