@@ -162,10 +162,13 @@ post:
           schema:
             type: object
             properties:
-              details:
+              status:
                 type: string
-              pk:
+              req_pk:
                 type: string  
+              esaw_token:
+                type: string
           example:
-            details: "a"
-            pk: "a"
+            status: "ok"
+            req_pk: "10000"
+            esaw_token: "67b93f0547b38d44ad8a5b3a323f12757b8114db1b7b48d6e209af96bd4459cdbddd8bf77b"

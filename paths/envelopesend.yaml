@@ -210,12 +210,9 @@ post:
           schema:
             type: object
             properties:
-              details:
+              EnvelopeId:
                 type: string
-              pk:
-                type: string  
           example:
-            details: "a"
-            pk: "a"
+            EnvelopeId: "b43b37e9-e277-4ef3-a0d1-2aa7f19c5a9"
 
 

@@ -12,11 +12,11 @@ servers:
 - url: https://one-shot.developers.uanataca.com
 tags:
 - name: Create
-  description: 'desc'
+  description: 'Endpoints to start requesting a digital certificate'
 - name: Files
-  description: 'desc'
+  description: 'Endpoints to manage files for further use in envelopes'
 - name: Envelope
-  description: 'desc'
+  description: 'Endpoints to manage envelopes'
 
 paths:
   /esawoneshot:

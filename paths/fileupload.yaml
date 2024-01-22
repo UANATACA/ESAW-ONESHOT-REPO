@@ -22,10 +22,8 @@ post:
           schema:
             type: object
             properties:
-              details:
+              FileId:
                 type: string
-              pk:
-                type: string  
           example:
-            details: "a"
-            pk: "a"
+            FileId: "52468c33-13fa-4b08-bd78-557261336931"
+
