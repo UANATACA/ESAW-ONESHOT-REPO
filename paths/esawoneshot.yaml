@@ -11,6 +11,11 @@ post:
             properties:
               rao:
                 type: object
+                required: 
+                  - rao_pk
+                  - rao_username
+                  - rao_password
+                  - rao_pin
                 properties: 
                   pk:
                     description: ID of RAO
@@ -26,6 +31,9 @@ post:
                     type: string
               documents: 
                 type: object
+                required: 
+                  - data
+                  - content_type
                 properties: 
                   document_front: 
                     description: Front side of identification document
@@ -129,13 +137,11 @@ post:
                       - false
                     type: boolean
             required: 
-              - rao_pk
-              - rao_username
-              - rao_password
-              - rao_pin
+              - rao
+              - documents
+              - request
 
-              - data
-              - content_type
+
   responses:
     '200':
       description: OK
