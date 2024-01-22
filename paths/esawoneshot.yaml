@@ -12,10 +12,10 @@ post:
               rao:
                 type: object
                 required: 
-                  - rao_pk
-                  - rao_username
-                  - rao_password
-                  - rao_pin
+                  - pk
+                  - username
+                  - password
+                  - pin
                 properties: 
                   pk:
                     description: ID of RAO
@@ -32,12 +32,16 @@ post:
               documents: 
                 type: object
                 required: 
-                  - data
-                  - content_type
+                  - document_front
+                  - document_rear
+                  - document_owner
                 properties: 
                   document_front: 
                     description: Front side of identification document
                     type: object
+                    required:
+                      - content_type
+                      - data
                     properties: 
                       content_type: 
                         type: string
@@ -52,6 +56,9 @@ post:
                   document_rear: 
                     description: Rear side of identification document
                     type: object
+                    required:
+                      - content_type
+                      - data
                     properties: 
                       content_type: 
                         type: string
@@ -66,6 +73,9 @@ post:
                   document_owner: 
                     description: Photo of the remote identity owner with the ID card under the chin
                     type: object
+                    required:
+                      - content_type
+                      - data
                     properties: 
                       content_type: 
                         type: string
@@ -77,6 +87,8 @@ post:
                       data: 
                         description: Document data encoded with base64
                         type: string
+
+
               request: 
                 type: object
                 required:  
