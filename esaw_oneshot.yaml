@@ -17,15 +17,15 @@ tags:
   description: 'Endpoints to manage envelopes'
 
 paths:
-  /esawoneshot:
+  /v1/esawoneshot:
     servers: 
-      - url:  https://api.sandbox.modernpki.com/api/v1
+      - url:  https://api.sandbox.modernpki.com/api
     $ref: ./paths/esawoneshot.yaml
-  /file/upload:
+  /v6/file/upload:
     servers: 
       - url: https://demo.esignanywhere.net/Api
     $ref: ./paths/fileupload.yaml
-  /envelope/send:
+  /v6/envelope/send:
     servers: 
       - url: https://demo.esignanywhere.net/Api 
     $ref: paths/envelopesend.yaml
