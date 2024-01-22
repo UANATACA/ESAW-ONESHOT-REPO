@@ -8,9 +8,6 @@ info:
   x-logo:
     url: https://raw.githubusercontent.com/UANATACA/ONESHOT-VIDEOID-REPO/main/img/oneshot_logo.png
     altText: Oneshot logo
-servers:
-- url: https://one-shot.developers.uanataca.com
-- url: https://demo.esignanywhere.net
 tags:
 - name: Create
   description: 'Endpoints to start requesting a digital certificate'
@@ -21,10 +18,16 @@ tags:
 
 paths:
   /esawoneshot:
+    servers: 
+      - url:  https://api.sandbox.modernpki.com/api/v1
     $ref: ./paths/esawoneshot.yaml
   /file/upload:
+    servers: 
+      - url: https://demo.esignanywhere.net/Api
     $ref: ./paths/fileupload.yaml
   /envelope/send:
+    servers: 
+      - url: https://demo.esignanywhere.net/Api 
     $ref: paths/envelopesend.yaml
 x-tagGroups:
 - name: API Reference
