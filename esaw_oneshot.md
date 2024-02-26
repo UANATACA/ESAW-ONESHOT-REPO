@@ -275,6 +275,6 @@ Response contains the created EnvelopeId that got sent to the user ready to be s
 A postman collection is available as a support for a quick start.<br>
 It is only required to edit `host`variable in Postman environment with the desired domain
 
-<a href="https://cdn.bit4id.com/es/uanataca/public/vol/Uanataca_VOL_Postman.zip"> eSAW One-Shot Postman collection download</a>
+<a href="https://cdn.bit4id.com/es/uanataca/public/oneshot/eSAW_One-Shot_Postman_collection.zip"> eSAW One-Shot Postman collection download</a>
 
 <div id="APIReference" style="padding-top: 60px;"><h1>API Reference<h1></div>
