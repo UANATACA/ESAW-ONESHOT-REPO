@@ -5,9 +5,7 @@ info:
   description: 
     $ref: ./esaw_oneshot.md
   version: v1
-  x-logo:
-    url: https://raw.githubusercontent.com/UANATACA/ESAW-ONESHOT-REPO/main/img/logo.png
-    altText: eSAW One-Shot logo
+
 tags:
 - name: Create
   description: 'Endpoints to start requesting a digital certificate'
